@@ -133,7 +133,7 @@ def read_instances(filename):
             tasks.append((task_id, r, l, w))
 
         instances.append({
-            "processors": m,
+            "n_processors": m,
             "tasks": tasks
         })
 
