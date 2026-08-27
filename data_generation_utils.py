@@ -1,8 +1,20 @@
 import random
+from dataclasses import dataclass
+
+@dataclass
+class Task:
+    id : int
+    r : int # release
+    l: int  # length
+    w: int  # weight
+
+@dataclass
+class Instance:
+    n_processors : int
+    tasks: list[Task]
 
 def random_value(lo, hi):
     return random.randint(lo, hi)
-
 
 def generate_instance(
     n_tasks,
@@ -69,10 +81,10 @@ def generate_instance(
             )
 
         tasks.append(
-            (i, release_time, length, weight)
+            Task(i, release_time, length, weight)
         )
 
-    return n_processors, tasks
+    return Instance(n_processors, tasks)
 
 
 def generate_instances(
@@ -88,8 +100,8 @@ def generate_instances(
     with open(filename, "w") as file:
 
         for _ in range(n_instances):
-
-            m, tasks = generate_instance(
+            
+            instance = generate_instance(
                 n_tasks=n_tasks,
                 n_processors=n_processors,
                 release_range=release_range,
@@ -97,12 +109,10 @@ def generate_instances(
                 weight_range=weight_range,
                 correlation=correlation
             )
-
-            file.write(f"{m} {n_tasks}\n")
-
-            for task_id, r, l, w in tasks:
-                file.write(f"{task_id} {r} {l} {w}\n")
-
+            
+            file.write(f"{n_processors} {n_tasks}\n")
+            for task in instance.tasks:
+                file.write(f"{task.id} {task.r} {task.l} {task.w}\n")
             file.write("\n")
 
 
@@ -119,8 +129,6 @@ def read_instances(filename):
         if not lines[i].strip():
             i += 1
             continue
-
-        print(lines[i])
         m, n = map(int, lines[i].split())
         i += 1
 
@@ -130,25 +138,10 @@ def read_instances(filename):
             task_id, r, l, w = map(int, lines[i].split())
             i += 1
 
-            tasks.append((task_id, r, l, w))
+            tasks.append(Task(task_id, r, l, w))
 
-        instances.append({
-            "n_processors": m,
-            "tasks": tasks
-        })
+        instances.append(Instance(m, tasks))
 
     return instances
 
 
-generate_instances(
-    filename="instances.txt",
-    n_instances=1,
-    n_tasks=10,
-    n_processors=2,
-    release_range=(0, 10),
-    length_range=(1, 20),
-    weight_range=(1, 20),
-    correlation="none"
-)
-
-print(read_instances("instances.txt"))
