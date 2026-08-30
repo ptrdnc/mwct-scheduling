@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Uvod}{2}{section.1}%
+\contentsline {section}{\numberline {2}Opis rešenja}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Reprezentacija podataka}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Gruba sila}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Pohlepni algoritmi}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}S-metaheuristike}{4}{subsection.2.4}%
+\contentsline {paragraph}{Lokalna pretraga (Local Search).}{4}{section*.2}%
+\contentsline {paragraph}{Promenljiva okolina (Variable Neighborhood Search, VNS):}{4}{section*.3}%
+\contentsline {paragraph}{Simulirano kaljenje (Simulated Annealing):}{5}{section*.4}%
+\contentsline {subsection}{\numberline {2.5}Genetski algoritam}{5}{subsection.2.5}%
+\contentsline {paragraph}{Reprezentacija (hromozom):}{5}{section*.5}%
+\contentsline {paragraph}{Dekodiranje}{5}{section*.6}%
+\contentsline {paragraph}{Genetski operatori.}{5}{section*.7}%
+\contentsline {subsection}{\numberline {2.6}Memetički algoritam}{6}{subsection.2.6}%
+\contentsline {paragraph}{Enkodiranje:}{6}{section*.8}%
+\contentsline {paragraph}{Genetski operatori:}{6}{section*.9}%
+\contentsline {paragraph}{Lokalna pretraga:}{6}{section*.10}%
+\contentsline {paragraph}{}{6}{section*.11}%
+\contentsline {section}{\numberline {3}Eksperimenti i analiza rezultata}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Brute force naspram pohlepnih heuristika}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}S metaheuristike}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Populacioni algoritmi}{9}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Zaključak}{10}{section.4}%
